@@ -141,3 +141,25 @@ LEFT JOIN
 	Dependent d
 ON
 	e.SSN = d.ESSN
+
+
+----- Part2 | DML -----
+/*
+1.	Insert your personal data to the employee table as a new employee 
+in departmentnumber 30, SSN = 102672, Superssn = 112233, salary=3000.
+*/
+insert into Employee
+Values('Youssef', 'Sherif', 102672, 17/10/2003, 'Cairo', 'M', 3000, 112233, 30)
+
+/*
+Insert another employee with personal data your friend as new employeein department
+number 30, SSN = 102660, but don’t enter any value for salary or manager number to him.
+*/
+
+insert into Employee
+Values('Mohsen', 'Mohamed', 102660, 1/1/2003, 'Cairo', 'M', NULL, NULL, 30)
+
+--Upgrade your salary by 20 % of its last value.
+update Employee
+	set Salary = Salary * 1.2
+where SSN = 102672
